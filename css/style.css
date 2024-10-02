@@ -1,88 +1,81 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui padding e borda na largura/altura total */
 }
 
-
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    display: flex; /* Utiliza Flexbox para organizar os elementos dentro do body */
+    align-items: center; /* Alinha os itens no centro verticalmente */
+    justify-content: center; /* Alinha os itens no centro horizontalmente */
+    flex-direction: column; /* Organiza os itens em uma coluna */
 
-    min-height: 100vh;
-    font-family: sans-serif;
+    min-height: 100vh; /* Define a altura mínima do body como 100% da altura da viewport */
+    font-family: sans-serif; /* Define a fonte do texto como sans-serif */
 
-    background-color: black;
+    background-color: black; /* Define a cor de fundo como preto */
 
-    position: relative;
+    position: relative; /* Permite o posicionamento absoluto dos elementos filhos */
 }
 
 .game {
-    background-image: url(../assets/scene.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(../assets/scene.jpg); /* Define uma imagem de fundo para a div do jogo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-size: cover; /* Faz com que a imagem cubra toda a área da div */
+    background-repeat: no-repeat; /* Não repete a imagem de fundo */
 
-    width: 1280px;
-    height: 720px;
+    width: 1280px; /* Largura da área do jogo */
+    height: 720px; /* Altura da área do jogo */
 
-    position: relative;
+    position: relative; /* Permite o posicionamento absoluto dos elementos filhos dentro dela */
 }
 
 .character {
-    position: absolute;
-    width: 75px;
+    position: absolute; /* Permite o posicionamento absoluto dos personagens */
+    width: 75px; /* Define a largura dos personagens */
 }
 
 #ash {
-    right: 2px;
-    z-index: 1;
+    right: 2px; /* Posiciona o personagem Ash à direita da div do jogo */
+    z-index: 1; /* Define a ordem de empilhamento, fazendo com que Ash fique acima de outros elementos */
 }
 
 #zubat {
-    right: 90px;
-    top: 650px;
+    right: 90px; /* Posiciona o Zubat à direita */
+    top: 650px; /* Posiciona o Zubat na parte inferior */
 }
 
 #pikachu {
-    display: none; 
-    right: 600px;
-    top: 330px;
+    display: none; /* Esconde o Pikachu inicialmente */
+    right: 600px; /* Posiciona o Pikachu à direita */
+    top: 330px; /* Posiciona o Pikachu verticalmente */
 }
 
 #charmander {
-   display: none; 
-    width: 65px;
-    right: 175px;
-    top: 55px;
+    display: none; /* Esconde o Charmander inicialmente */
+    width: 65px; /* Define a largura do Charmander */
+    right: 175px; /* Posiciona o Charmander à direita */
+    top: 55px; /* Posiciona o Charmander verticalmente */
 }
 
 .music-control {
-    width: 50px;
-    top: 48px;
-    right: 48px;
-    position: absolute;
-
-    cursor: pointer;
+    width: 50px; /* Define a largura do controle de música */
+    top: 48px; /* Posiciona o controle de música no topo */
+    right: 48px; /* Posiciona o controle de música à direita */
+    position: absolute; /* Permite o posicionamento absoluto */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
 }
 
 #reset {
-    display: none;
-
-    width: 100px;
-    height: 100px;
-
-    cursor: pointer;
-
-    position: absolute;
-
-    z-index: 3;
-
+    display: none; /* Esconde o botão de reset inicialmente */
+    width: 100px; /* Define a largura do botão de reset */
+    height: 100px; /* Define a altura do botão de reset */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    position: absolute; /* Permite o posicionamento absoluto */
+    z-index: 3; /* Define a ordem de empilhamento, colocando o reset acima de outros elementos */
 }
 
 #reset:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
+    opacity: 0.8; /* Muda a opacidade quando o mouse passa sobre o botão */
+    transform: scale(1.05); /* Aumenta levemente o tamanho do botão quando o mouse passa sobre ele */
 }
